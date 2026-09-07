@@ -40,9 +40,10 @@
             // 
             Setting.Anchor = AnchorStyles.None;
             Setting.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Setting.Location = new Point(9, 506);
+            Setting.Location = new Point(8, 380);
+            Setting.Margin = new Padding(3, 2, 3, 2);
             Setting.Name = "Setting";
-            Setting.Size = new Size(124, 28);
+            Setting.Size = new Size(108, 21);
             Setting.TabIndex = 0;
             Setting.Text = "Налаштування";
             Setting.UseVisualStyleBackColor = true;
@@ -51,9 +52,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(336, 18);
+            label1.Location = new Point(294, 14);
             label1.Name = "label1";
-            label1.Size = new Size(154, 20);
+            label1.Size = new Size(122, 15);
             label1.TabIndex = 1;
             label1.Text = "Активні голосування";
             // 
@@ -62,36 +63,39 @@
             label2.AutoSize = true;
             label2.Location = new Point(3, 0);
             label2.Name = "label2";
-            label2.Size = new Size(89, 20);
+            label2.Size = new Size(71, 15);
             label2.TabIndex = 5;
             label2.Text = "Користувач";
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(label2);
-            flowLayoutPanel1.Location = new Point(7, 2);
+            flowLayoutPanel1.Location = new Point(6, 2);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(129, 36);
+            flowLayoutPanel1.Size = new Size(113, 27);
             flowLayoutPanel1.TabIndex = 6;
             // 
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             flowLayoutPanel2.AutoScroll = true;
-            flowLayoutPanel2.Location = new Point(336, 43);
+            flowLayoutPanel2.Location = new Point(294, 32);
+            flowLayoutPanel2.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(639, 500);
+            flowLayoutPanel2.Size = new Size(559, 375);
             flowLayoutPanel2.TabIndex = 7;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(980, 546);
+            ClientSize = new Size(858, 410);
             Controls.Add(flowLayoutPanel2);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             Controls.Add(Setting);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
