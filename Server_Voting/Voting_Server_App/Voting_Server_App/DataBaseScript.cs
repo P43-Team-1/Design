@@ -18,7 +18,7 @@ namespace Voting_Server_App
         {
             while (true)
             {
-                // Запуст слуїання та відповіді на запити клієнтів
+                
             }
         }
     }
