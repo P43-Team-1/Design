@@ -30,71 +30,73 @@
         {
             Setting = new Button();
             label1 = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            Voting = new GroupBox();
             label2 = new Label();
-            Voting.SuspendLayout();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // Setting
             // 
+            Setting.Anchor = AnchorStyles.None;
             Setting.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Setting.Location = new Point(472, 330);
+            Setting.Location = new Point(9, 506);
             Setting.Name = "Setting";
             Setting.Size = new Size(124, 28);
             Setting.TabIndex = 0;
             Setting.Text = "Налаштування";
             Setting.UseVisualStyleBackColor = true;
+            Setting.Click += Setting_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(50, 70);
+            label1.Location = new Point(336, 18);
             label1.Name = "label1";
             label1.Size = new Size(154, 20);
             label1.TabIndex = 1;
             label1.Text = "Активні голосування";
             // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(50, 93);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(516, 162);
-            flowLayoutPanel1.TabIndex = 2;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
-            // 
-            // Voting
-            // 
-            Voting.Controls.Add(label2);
-            Voting.Location = new Point(12, 12);
-            Voting.Name = "Voting";
-            Voting.Size = new Size(584, 46);
-            Voting.TabIndex = 3;
-            Voting.TabStop = false;
-            Voting.Text = "Голосування";
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(453, 17);
+            label2.Location = new Point(3, 0);
             label2.Name = "label2";
-            label2.Size = new Size(125, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Ім'я користувача";
+            label2.Size = new Size(89, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Користувач";
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(label2);
+            flowLayoutPanel1.Location = new Point(7, 2);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(129, 36);
+            flowLayoutPanel1.TabIndex = 6;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            flowLayoutPanel2.AutoScroll = true;
+            flowLayoutPanel2.Location = new Point(336, 43);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(639, 500);
+            flowLayoutPanel2.TabIndex = 7;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(608, 370);
-            Controls.Add(Voting);
+            ClientSize = new Size(980, 546);
+            Controls.Add(flowLayoutPanel2);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             Controls.Add(Setting);
             Name = "Form1";
             Text = "Form1";
-            Voting.ResumeLayout(false);
-            Voting.PerformLayout();
+            Load += Form1_Load;
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,8 +105,8 @@
 
         private Button Setting;
         private Label label1;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private GroupBox Voting;
         private Label label2;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flowLayoutPanel2;
     }
 }
