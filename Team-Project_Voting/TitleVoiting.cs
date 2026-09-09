@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
-
+using static Team_Project_Voting.Form1;
 namespace Team_Project_Voting
 {
     public partial class TitleVoiting : UserControl
@@ -20,6 +20,19 @@ namespace Team_Project_Voting
         private string _title;
         private string _voted;
         private Image _background;
+
+        private void btnVoting_Click(object sender, EventArgs e)
+        {
+            Form mainForm = this.FindForm();
+
+            mainForm.Hide();
+
+            Voting votingForm = new Voting();
+            votingForm.ShowDialog();
+
+            mainForm.Show();
+
+        }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         [Category("Voting")]

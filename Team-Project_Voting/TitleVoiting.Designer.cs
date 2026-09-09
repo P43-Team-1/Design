@@ -45,6 +45,7 @@
             btnVoting.TabIndex = 0;
             btnVoting.Text = "Голосувати";
             btnVoting.UseVisualStyleBackColor = true;
+            btnVoting.Click += btnVoting_Click;
             // 
             // lblVoted
             // 

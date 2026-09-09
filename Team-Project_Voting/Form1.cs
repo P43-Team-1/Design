@@ -8,12 +8,11 @@ namespace Team_Project_Voting
         public Form1()
         {
             InitializeComponent();
-
+            label1.Text = "I am a label";
         }
-
         private void Setting_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void VoteItems()
@@ -23,7 +22,6 @@ namespace Team_Project_Voting
             for (int i = 0; i < votingItems.Length; i++)
             {
                 votingItems[i] = new TitleVoiting();
-
                 votingItems[i].Background = PictrureMatrix(Properties.Resources.Знімок_екрана_2026_02_18_172853, 0.8f); ;
                 votingItems[i].title = "Voting Item " + (i + 1);
                 votingItems[i].Voted = "0 votes";
